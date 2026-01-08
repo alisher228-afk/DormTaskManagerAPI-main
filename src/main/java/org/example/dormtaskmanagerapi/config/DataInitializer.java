@@ -24,11 +24,6 @@
 //            adminAuth.setRole(Role.ADMIN);
 //            authUserRepository.save(adminAuth);
 //
-//            User admin = new User();
-//            admin.setName("Admin User");
-//            admin.setAuthUser(adminAuth);
-//            userRepository.save(admin);
-//
 //        };
 //    }
 //}
