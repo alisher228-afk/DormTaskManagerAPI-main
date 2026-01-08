@@ -1,7 +1,6 @@
 package org.example.dormtaskmanagerapi.entity;
 
 import jakarta.persistence.*;
-import org.example.dormtaskmanagerapi.security.Role;
 
 @Entity
 @Table(name = "users")

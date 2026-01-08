@@ -2,6 +2,7 @@ package org.example.dormtaskmanagerapi.application.service;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserListResponse;
+import org.example.dormtaskmanagerapi.entity.AuthUser;
 import org.example.dormtaskmanagerapi.entity.User;
 import org.example.dormtaskmanagerapi.entity.repository.RoomRepository;
 import org.example.dormtaskmanagerapi.entity.repository.TaskRepository;
@@ -34,6 +35,8 @@ public class UserService {
         if(!roomRepository.existsById(user.getRoom().getId())) {
             throw new EntityNotFoundException("Room not found");
         }
+        AuthUser authUser = new AuthUser();
+        user.setAuthUser(authUser);
         userRepository.save(user);
         return user;
     }
