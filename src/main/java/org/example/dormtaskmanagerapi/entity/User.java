@@ -1,21 +1,29 @@
 package org.example.dormtaskmanagerapi.entity;
 
 import jakarta.persistence.*;
+import org.example.dormtaskmanagerapi.security.Role;
 
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "name")
     private String name;
+
     @JoinColumn(name = "room_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private Room room;
-    public User() {
-    }
+
+    @OneToOne
+    @JoinColumn(name = "auth_user_id")
+    private AuthUser authUser;
+
+    public User() {}
+
     public User(String name, Room room) {
         this.name = name;
         this.room = room;
@@ -44,5 +52,12 @@ public class User {
     public void setRoom(Room room) {
         this.room = room;
     }
-}
 
+    public AuthUser getAuthUser() {
+        return authUser;
+    }
+
+    public void setAuthUser(AuthUser authUser) {
+        this.authUser = authUser;
+    }
+}

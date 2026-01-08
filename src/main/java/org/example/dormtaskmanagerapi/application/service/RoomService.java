@@ -6,6 +6,7 @@ import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomDetailRe
 import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserShortResponse;
 import org.example.dormtaskmanagerapi.application.mapper.RoomMapper;
 import org.example.dormtaskmanagerapi.entity.Room;
+import org.example.dormtaskmanagerapi.entity.repository.AuthUserRepository;
 import org.example.dormtaskmanagerapi.entity.repository.RoomRepository;
 import org.example.dormtaskmanagerapi.entity.repository.TaskRepository;
 import org.example.dormtaskmanagerapi.entity.repository.UserRepository;
@@ -29,12 +30,14 @@ public class RoomService {
     private final UserRepository userRepository;
     private final TaskRepository taskRepository;
     private final RoomMapper roomMapper;
+    private final AuthUserRepository authUserRepository;
 
-    public RoomService(RoomRepository roomRepository, UserRepository userRepository, TaskRepository taskRepository, RoomMapper roomMapper) {
+    public RoomService(RoomRepository roomRepository, UserRepository userRepository, TaskRepository taskRepository, RoomMapper roomMapper, AuthUserRepository authUserRepository) {
         this.roomRepository = roomRepository;
         this.userRepository = userRepository;
         this.taskRepository = taskRepository;
         this.roomMapper = roomMapper;
+        this.authUserRepository = authUserRepository;
     }
 
     public Room createRoom(Room room) {
