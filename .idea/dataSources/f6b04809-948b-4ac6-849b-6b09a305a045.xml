@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>1235</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1469</IntrospectionStateNumber>
       <ServerVersion>18.1</ServerVersion>
-      <StartupTime>1767862732</StartupTime>
+      <StartupTime>1767945981</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -708,7 +700,7 @@ false posixrules
 13293||10|C|G
 13293||-9223372036854775808|U|G
 13293||10|U|G</Grants>
-      <IntrospectionStateNumber>1235</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1469</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4224,14 +4216,338 @@ false posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>1235</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>1235</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>1235</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>1469</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>1469</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>1469</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-08.11:02:04</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.09:55:44</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>546</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
+    <sequence id="272" parent="271" name="auth_users_id_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33843</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1449</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="273" parent="271" name="rooms_id_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33858</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1450</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="274" parent="271" name="tasks_id_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33866</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1451</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="275" parent="271" name="users_id_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33883</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1452</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="276" parent="271" name="auth_users">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33844</ObjectId>
+      <StateNumber>1459</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="277" parent="271" name="rooms">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33859</ObjectId>
+      <StateNumber>1457</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="278" parent="271" name="tasks">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33867</ObjectId>
+      <StateNumber>1457</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="279" parent="271" name="users">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33884</ObjectId>
+      <StateNumber>1458</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <check id="280" parent="276" name="auth_users_role_check">
+      <ColNames>role</ColNames>
+      <ObjectId>33848</ObjectId>
+      <Predicate>(role)::text = ANY ((ARRAY[&apos;ROLE_ADMIN&apos;::character varying, &apos;ROLE_USER&apos;::character varying])::text[])</Predicate>
+      <StateNumber>1449</StateNumber>
+    </check>
+    <column id="281" parent="276" name="id">
+      <DefaultExpression>nextval(&apos;auth_users_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1449</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>33843</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="282" parent="276" name="enabled">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>1449</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="283" parent="276" name="password">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>1449</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="284" parent="276" name="role">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>1449</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="285" parent="276" name="username">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>1449</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="286" parent="276" name="auth_users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33856</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1449</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="287" parent="276" name="uk_f9wqm8ya8k2x456jqotu3ihla">
+      <ColNames>username</ColNames>
+      <ObjectId>33891</ObjectId>
+      <StateNumber>1454</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="288" parent="276" name="auth_users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33857</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1449</StateNumber>
+      <UnderlyingIndexId>33856</UnderlyingIndexId>
+    </key>
+    <key id="289" parent="276" name="uk_f9wqm8ya8k2x456jqotu3ihla">
+      <ObjectId>33892</ObjectId>
+      <StateNumber>1454</StateNumber>
+      <UnderlyingIndexId>33891</UnderlyingIndexId>
+    </key>
+    <column id="290" parent="277" name="id">
+      <DefaultExpression>nextval(&apos;rooms_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1450</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>33858</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="291" parent="277" name="name">
+      <Position>2</Position>
+      <StateNumber>1450</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="292" parent="277" name="rooms_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33864</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1450</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="293" parent="277" name="rooms_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33865</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1450</StateNumber>
+      <UnderlyingIndexId>33864</UnderlyingIndexId>
+    </key>
+    <check id="294" parent="278" name="tasks_status_check">
+      <ColNames>status</ColNames>
+      <ObjectId>33871</ObjectId>
+      <Predicate>(status)::text = ANY ((ARRAY[&apos;IN_PROGRESS&apos;::character varying, &apos;COMPLETED&apos;::character varying])::text[])</Predicate>
+      <StateNumber>1451</StateNumber>
+    </check>
+    <check id="295" parent="278" name="tasks_task_type_check">
+      <ColNames>task_type</ColNames>
+      <ObjectId>33872</ObjectId>
+      <Predicate>(task_type)::text = ANY ((ARRAY[&apos;CLEAN_ROOM&apos;::character varying, &apos;BUY_WATER&apos;::character varying, &apos;TAKE_OUT_TRASH&apos;::character varying, &apos;WASH_DISHES&apos;::character varying])::text[])</Predicate>
+      <StateNumber>1451</StateNumber>
+    </check>
+    <column id="296" parent="278" name="id">
+      <DefaultExpression>nextval(&apos;tasks_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1451</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>33866</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="297" parent="278" name="description">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>1451</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="298" parent="278" name="status">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>1451</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="299" parent="278" name="task_type">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>1451</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="300" parent="278" name="room_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>1451</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="301" parent="278" name="owner_id">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>1451</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="302" parent="278" name="fk2qgc49xgrpfaevy9q4d9rm1xo">
+      <ColNames>room_id</ColNames>
+      <ObjectId>33895</ObjectId>
+      <StateNumber>1457</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>33859</RefTableId>
+    </foreign-key>
+    <foreign-key id="303" parent="278" name="fkh279lo9lqbhxqh68jq9sqs83s">
+      <ColNames>owner_id</ColNames>
+      <ObjectId>33900</ObjectId>
+      <StateNumber>1458</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>33884</RefTableId>
+    </foreign-key>
+    <index id="304" parent="278" name="tasks_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33881</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1451</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="305" parent="278" name="tasks_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33882</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1451</StateNumber>
+      <UnderlyingIndexId>33881</UnderlyingIndexId>
+    </key>
+    <column id="306" parent="279" name="id">
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1452</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>33883</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="307" parent="279" name="name">
+      <Position>2</Position>
+      <StateNumber>1452</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="308" parent="279" name="auth_user_id">
+      <Position>3</Position>
+      <StateNumber>1452</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="309" parent="279" name="room_id">
+      <Position>4</Position>
+      <StateNumber>1452</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="310" parent="279" name="fk85o8ymdn3v4qlxf8bj6vfyiu9">
+      <ColNames>auth_user_id</ColNames>
+      <ObjectId>33905</ObjectId>
+      <StateNumber>1459</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>33844</RefTableId>
+    </foreign-key>
+    <foreign-key id="311" parent="279" name="fklp7mqwp35k0xb2vyjw7rsi9gb">
+      <ColNames>room_id</ColNames>
+      <ObjectId>33910</ObjectId>
+      <StateNumber>1460</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>33859</RefTableId>
+    </foreign-key>
+    <index id="312" parent="279" name="users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33889</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1452</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="313" parent="279" name="uk_4x5wa7m6atwlkkb4m1lyem8ak">
+      <ColNames>auth_user_id</ColNames>
+      <ObjectId>33893</ObjectId>
+      <StateNumber>1456</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="314" parent="279" name="users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33890</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1452</StateNumber>
+      <UnderlyingIndexId>33889</UnderlyingIndexId>
+    </key>
+    <key id="315" parent="279" name="uk_4x5wa7m6atwlkkb4m1lyem8ak">
+      <ObjectId>33894</ObjectId>
+      <StateNumber>1456</StateNumber>
+      <UnderlyingIndexId>33893</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>

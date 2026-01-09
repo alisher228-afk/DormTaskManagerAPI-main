@@ -4,20 +4,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git security">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/AuthRegisterResponses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" afterDir="false" />
+    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git securityUpdate">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/login/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/login/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/TaskResponse/TaskResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/mapper/TaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/MethodSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/SecurityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/jwt/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserListResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/AuthUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/SecurityBeansConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/SecurityBeansConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/AuthUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/AuthUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/DormTaskManagerApiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/AuthRegisterResponses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/RegisterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/RoomResponses/RoomDetailResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/RoomResponses/RoomListResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserListResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserShortResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/RoomMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/RoomMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/AuthUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/RoomService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/TaskService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/config/SecurityBeansConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/AuthUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/TaskType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/AuthUserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/RoomRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/TaskRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/exception/ExMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/RoomController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/TaskController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/UserDetailsImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/example/dormtaskmanagerapi/application/mapper/RoomMapperImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +83,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -77,6 +133,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.DormTaskManagerApiApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;Maven.DormTaskManagerAPI [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.DormTaskManagerAPI [spring-boot:run].executor&quot;: &quot;Run&quot;,
@@ -101,7 +158,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -110,14 +167,10 @@
     ]
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.dormtaskmanagerapi.DormTaskManagerApiApplication" />
-      <module name="DormTaskManagerAPI" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.dormtaskmanagerapi.security.jwt" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -141,7 +194,11 @@
       <workItem from="1767710392349" duration="2992000" />
       <workItem from="1767721632766" duration="1383000" />
       <workItem from="1767784848426" duration="3126000" />
-      <workItem from="1767861815241" duration="8038000" />
+      <workItem from="1767861815241" duration="8899000" />
+      <workItem from="1767879009476" duration="1405000" />
+      <workItem from="1767880511497" duration="5250000" />
+      <workItem from="1767890730659" duration="4721000" />
+      <workItem from="1767945841191" duration="7833000" />
     </task>
     <task id="LOCAL-00001" summary="git com">
       <option name="closed" value="true" />
@@ -175,7 +232,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767862229320</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="git securityUpdate">
+      <option name="closed" value="true" />
+      <created>1767871606336</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767871606336</updated>
+    </task>
+    <task id="LOCAL-00006" summary="git securityUpdate">
+      <option name="closed" value="true" />
+      <created>1767871962472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1767871962472</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +286,15 @@
     <MESSAGE value="git com" />
     <MESSAGE value="git com1" />
     <MESSAGE value="git security" />
-    <option name="LAST_COMMIT_MESSAGE" value="git security" />
+    <MESSAGE value="git securityUpdate" />
+    <option name="LAST_COMMIT_MESSAGE" value="git securityUpdate" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

@@ -20,7 +20,7 @@ public class UserDetailsImpl implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(
-                new SimpleGrantedAuthority("ROLE_" + authUser.getRole().name())
+                new SimpleGrantedAuthority(authUser.getRole().name())
         );
     }
 
@@ -42,4 +42,8 @@ public class UserDetailsImpl implements UserDetails {
     @Override public boolean isAccountNonExpired() { return true; }
     @Override public boolean isAccountNonLocked() { return true; }
     @Override public boolean isCredentialsNonExpired() { return true; }
+
+    public AuthUser getAuthUser() {
+        return authUser;
+    }
 }

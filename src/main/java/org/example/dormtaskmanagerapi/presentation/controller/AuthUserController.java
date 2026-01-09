@@ -1,10 +1,13 @@
 package org.example.dormtaskmanagerapi.presentation.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.AuthRegisterResponses;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.RegisterRequest;
+import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.login.LoginRequest;
+import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.login.LoginResponse;
 import org.example.dormtaskmanagerapi.application.service.AuthUserService;
-import org.example.dormtaskmanagerapi.entity.AuthUser;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -21,7 +24,7 @@ public class AuthUserController {
         return authUserService.register(request);
     }
 
-
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/authUsers")
     public Page<AuthRegisterResponses> getAuthUsers(
             @RequestParam(defaultValue = "0") int page,
@@ -29,4 +32,9 @@ public class AuthUserController {
     {
         return authUserService.getAuthUsers(page, size);
     }
+    @PostMapping("/login")
+    public LoginResponse login(@RequestBody LoginRequest request) {
+        return authUserService.login(request);
+    }
+
 }

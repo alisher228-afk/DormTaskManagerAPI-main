@@ -4,6 +4,8 @@ import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.AuthRegisterResponses;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.RegisterRequest;
+import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.login.LoginRequest;
+import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.login.LoginResponse;
 import org.example.dormtaskmanagerapi.application.mapper.AuthUserMapper;
 import org.example.dormtaskmanagerapi.entity.AuthUser;
 import org.example.dormtaskmanagerapi.entity.Room;
@@ -11,6 +13,7 @@ import org.example.dormtaskmanagerapi.entity.User;
 import org.example.dormtaskmanagerapi.entity.repository.AuthUserRepository;
 import org.example.dormtaskmanagerapi.entity.repository.RoomRepository;
 import org.example.dormtaskmanagerapi.security.Role;
+import org.example.dormtaskmanagerapi.security.jwt.JwtService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -23,12 +26,14 @@ public class AuthUserService {
     private final AuthUserMapper authUserMapper;
     private final PasswordEncoder passwordEncoder;
     private final RoomRepository roomRepository;
+    private final JwtService jwtService;
 
-    public AuthUserService(AuthUserRepository authUserRepository, AuthUserMapper authUserMapper, PasswordEncoder passwordEncoder, RoomRepository roomRepository) {
+    public AuthUserService(AuthUserRepository authUserRepository, AuthUserMapper authUserMapper, PasswordEncoder passwordEncoder, RoomRepository roomRepository, JwtService jwtService) {
         this.authUserRepository = authUserRepository;
         this.authUserMapper = authUserMapper;
         this.passwordEncoder = passwordEncoder;
         this.roomRepository = roomRepository;
+        this.jwtService = jwtService;
     }
 
     public AuthRegisterResponses register(RegisterRequest request) {
@@ -40,7 +45,7 @@ public class AuthUserService {
         AuthUser authUser = new AuthUser();
         authUser.setUsername(request.username());
         authUser.setPassword(passwordEncoder.encode(request.password()));
-        authUser.setRole(Role.USER);
+        authUser.setRole(Role.ROLE_USER);
 
         User user = new User();
         user.setName(request.name());
@@ -48,13 +53,30 @@ public class AuthUserService {
         authUser.setUser(user);
         user.setAuthUser(authUser);
 
-        AuthUser saved = authUserRepository.save(authUser);
-        return authUserMapper.toAuthRegisterResponses(saved);
+        authUserRepository.save(authUser);
+
+        return authUserMapper.toAuthRegisterResponses(authUser);
     }
+
 
     public Page<AuthRegisterResponses> getAuthUsers(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         return authUserRepository.findAll(pageable)
                 .map(authUserMapper::toAuthRegisterResponses);
     }
+
+    public LoginResponse login(LoginRequest request) {
+
+        AuthUser authUser = authUserRepository.findByUsername(request.username())
+                .orElseThrow(() -> new RuntimeException("Invalid credentials"));
+
+        if (!passwordEncoder.matches(request.password(), authUser.getPassword())) {
+            throw new RuntimeException("Invalid credentials");
+        }
+
+        String token = jwtService.generateToken(authUser.getUsername());
+        return new LoginResponse(token);
+    }
+
+
 }

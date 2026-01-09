@@ -1,9 +1,11 @@
 package org.example.dormtaskmanagerapi.presentation.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserListResponse;
 import org.example.dormtaskmanagerapi.entity.User;
 import org.example.dormtaskmanagerapi.application.service.UserService;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @SuppressWarnings("NullableProblems")
@@ -20,17 +22,27 @@ public class UserController {
     public User createUser(@RequestBody User user) {
         return userService.createUsers(user);
     }
+
     @GetMapping
     public Page<UserListResponse> getUsers(@RequestParam int page, @RequestParam int size) {
         return userService.getUsers(page, size);
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @DeleteMapping("/delete/{id}")
     public User deleteUserById(@PathVariable Long id) {
         return userService.deleteUserById(id);
+    }
+    @PreAuthorize("hasRole('ADMIN')")
+    @PutMapping("/{id}/assign-room/{roomId}")
+    public User assignToRoom(@PathVariable("id") Long id, @PathVariable("roomId") Long roomId) {
+        return userService.assignToRoom(id, roomId);
     }
 
 }
