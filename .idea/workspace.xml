@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git JwtAndSwagger">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dormtaskmanagerapi/application/security/RoomServiceTest.java" afterDir="false" />
+    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git littleMistakes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +110,7 @@
       <recent name="org.example.dormtaskmanagerapi.security.jwt" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoomServiceTest.deleteRoomById_withUsers_throwException">
+  <component name="RunManager" selected="Application.DormTaskManagerApiApplication">
     <configuration name="RoomServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DormTaskManagerAPI" />
       <extension name="coverage">
@@ -242,7 +232,7 @@
       <workItem from="1768724984615" duration="1978000" />
       <workItem from="1768737300026" duration="30000" />
       <workItem from="1768910849131" duration="874000" />
-      <workItem from="1768914695664" duration="718000" />
+      <workItem from="1768914695664" duration="1820000" />
     </task>
     <task id="LOCAL-00001" summary="git com">
       <option name="closed" value="true" />
@@ -300,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767953791806</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="git littleMistakes">
+      <option name="closed" value="true" />
+      <created>1768915528009</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1768915528009</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +338,8 @@
     <MESSAGE value="git security" />
     <MESSAGE value="git securityUpdate" />
     <MESSAGE value="git JwtAndSwagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="git JwtAndSwagger" />
+    <MESSAGE value="git littleMistakes" />
+    <option name="LAST_COMMIT_MESSAGE" value="git littleMistakes" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
