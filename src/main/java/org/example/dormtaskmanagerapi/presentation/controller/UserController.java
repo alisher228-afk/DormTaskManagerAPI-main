@@ -1,6 +1,6 @@
 package org.example.dormtaskmanagerapi.presentation.controller;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserListResponse;
 import org.example.dormtaskmanagerapi.entity.User;
 import org.example.dormtaskmanagerapi.application.service.UserService;
@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-@SuppressWarnings("NullableProblems")
 @RestController
 @RequestMapping("/users")
 public class UserController {

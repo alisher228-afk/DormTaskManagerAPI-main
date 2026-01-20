@@ -4,76 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git securityUpdate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/login/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/login/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/TaskResponse/TaskResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/mapper/TaskMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/MethodSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/jwt/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6b04809-948b-4ac6-849b-6b09a305a045/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git JwtAndSwagger">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dormtaskmanagerapi/application/security/RoomServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserListResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/AuthUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/application/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/SecurityBeansConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/config/SecurityBeansConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/AuthUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/AuthUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/presentation/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/security/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/DormTaskManagerApiApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/AuthRegisterResponses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/AuthUserResponses/RegisterRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/RoomResponses/RoomDetailResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/RoomResponses/RoomListResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserListResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/Dto/UserResponses/UserShortResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/RoomMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/mapper/RoomMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/AuthUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/RoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/TaskService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/application/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/config/SecurityBeansConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/AuthUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/TaskType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/AuthUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/RoomRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/TaskRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/entity/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/exception/ExMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/AuthUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/RoomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/TaskController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/presentation/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/UserDetailsImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dormtaskmanagerapi/security/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/example/dormtaskmanagerapi/application/mapper/AuthUserMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/example/dormtaskmanagerapi/application/mapper/RoomMapperImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +77,12 @@
   &quot;keyToString&quot;: {
     &quot;Application.DormTaskManagerApiApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DormTaskManagerApiApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoomServiceTest.deleteRoomById_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoomServiceTest.deleteRoomById_withUsers_throwException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoomServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoomServiceTest.getRoomById_admin_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoomServiceTest.getRoomById_userWithoutRoom_throwException.executor&quot;: &quot;Run&quot;,
     &quot;Maven.DormTaskManagerAPI [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.DormTaskManagerAPI [spring-boot:run].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
@@ -172,6 +120,96 @@
       <recent name="org.example.dormtaskmanagerapi.security.jwt" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.RoomServiceTest.deleteRoomById_withUsers_throwException">
+    <configuration name="RoomServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DormTaskManagerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dormtaskmanagerapi.application.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dormtaskmanagerapi.application.security" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dormtaskmanagerapi.application.security.RoomServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomServiceTest.deleteRoomById_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DormTaskManagerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dormtaskmanagerapi.application.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dormtaskmanagerapi.application.security" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dormtaskmanagerapi.application.security.RoomServiceTest" />
+      <option name="METHOD_NAME" value="deleteRoomById_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomServiceTest.deleteRoomById_withUsers_throwException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DormTaskManagerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dormtaskmanagerapi.application.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dormtaskmanagerapi.application.security" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dormtaskmanagerapi.application.security.RoomServiceTest" />
+      <option name="METHOD_NAME" value="deleteRoomById_withUsers_throwException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomServiceTest.getRoomById_admin_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DormTaskManagerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dormtaskmanagerapi.application.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dormtaskmanagerapi.application.security" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dormtaskmanagerapi.application.security.RoomServiceTest" />
+      <option name="METHOD_NAME" value="getRoomById_admin_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomServiceTest.getRoomById_userWithoutRoom_throwException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DormTaskManagerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dormtaskmanagerapi.application.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dormtaskmanagerapi.application.security" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dormtaskmanagerapi.application.security.RoomServiceTest" />
+      <option name="METHOD_NAME" value="getRoomById_userWithoutRoom_throwException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RoomServiceTest.deleteRoomById_withUsers_throwException" />
+        <item itemvalue="JUnit.RoomServiceTest.deleteRoomById_success" />
+        <item itemvalue="JUnit.RoomServiceTest.getRoomById_userWithoutRoom_throwException" />
+        <item itemvalue="JUnit.RoomServiceTest" />
+        <item itemvalue="JUnit.RoomServiceTest.getRoomById_admin_success" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -198,7 +236,13 @@
       <workItem from="1767879009476" duration="1405000" />
       <workItem from="1767880511497" duration="5250000" />
       <workItem from="1767890730659" duration="4721000" />
-      <workItem from="1767945841191" duration="7833000" />
+      <workItem from="1767945841191" duration="8187000" />
+      <workItem from="1768560416485" duration="4907000" />
+      <workItem from="1768585693731" duration="1581000" />
+      <workItem from="1768724984615" duration="1978000" />
+      <workItem from="1768737300026" duration="30000" />
+      <workItem from="1768910849131" duration="874000" />
+      <workItem from="1768914695664" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="git com">
       <option name="closed" value="true" />
@@ -248,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767871962472</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="git JwtAndSwagger">
+      <option name="closed" value="true" />
+      <created>1767953791806</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767953791806</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +339,8 @@
     <MESSAGE value="git com1" />
     <MESSAGE value="git security" />
     <MESSAGE value="git securityUpdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="git securityUpdate" />
+    <MESSAGE value="git JwtAndSwagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="git JwtAndSwagger" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

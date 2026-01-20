@@ -1,6 +1,5 @@
 package org.example.dormtaskmanagerapi.presentation.controller;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.AuthRegisterResponses;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.RegisterRequest;
 import org.example.dormtaskmanagerapi.application.Dto.AuthUserResponses.login.LoginRequest;

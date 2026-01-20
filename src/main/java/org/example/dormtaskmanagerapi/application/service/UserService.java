@@ -16,7 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-@SuppressWarnings("NullableProblems")
+
 @Service
 public class UserService {
     public static final Logger log = LoggerFactory.getLogger(UserService.class);

@@ -7,7 +7,6 @@ import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserShortRes
 import org.example.dormtaskmanagerapi.application.mapper.RoomMapper;
 import org.example.dormtaskmanagerapi.entity.Room;
 import org.example.dormtaskmanagerapi.entity.User;
-import org.example.dormtaskmanagerapi.entity.repository.AuthUserRepository;
 import org.example.dormtaskmanagerapi.entity.repository.RoomRepository;
 import org.example.dormtaskmanagerapi.entity.repository.TaskRepository;
 import org.example.dormtaskmanagerapi.entity.repository.UserRepository;
@@ -23,7 +22,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@SuppressWarnings("NullableProblems")
 @Service
 public class RoomService {
 
@@ -33,15 +31,13 @@ public class RoomService {
     private final UserRepository userRepository;
     private final TaskRepository taskRepository;
     private final RoomMapper roomMapper;
-    private final AuthUserRepository authUserRepository;
     private final SecurityService securityService;
 
-    public RoomService(RoomRepository roomRepository, UserRepository userRepository, TaskRepository taskRepository, RoomMapper roomMapper, AuthUserRepository authUserRepository, SecurityService securityService) {
+    public RoomService(RoomRepository roomRepository, UserRepository userRepository, TaskRepository taskRepository, RoomMapper roomMapper, SecurityService securityService) {
         this.roomRepository = roomRepository;
         this.userRepository = userRepository;
         this.taskRepository = taskRepository;
         this.roomMapper = roomMapper;
-        this.authUserRepository = authUserRepository;
         this.securityService = securityService;
     }
 

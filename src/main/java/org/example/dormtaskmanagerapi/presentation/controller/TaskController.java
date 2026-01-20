@@ -1,6 +1,5 @@
 package org.example.dormtaskmanagerapi.presentation.controller;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.example.dormtaskmanagerapi.application.Dto.TaskResponse.TaskResponse;
 import org.example.dormtaskmanagerapi.application.mapper.TaskMapper;
 import org.example.dormtaskmanagerapi.entity.Task;
@@ -9,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-@SuppressWarnings("NullableProblems")
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {

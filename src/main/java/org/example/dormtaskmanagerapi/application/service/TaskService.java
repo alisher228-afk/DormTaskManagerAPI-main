@@ -5,7 +5,6 @@ import jakarta.persistence.EntityNotFoundException;
 import org.example.dormtaskmanagerapi.entity.*;
 import org.example.dormtaskmanagerapi.entity.repository.RoomRepository;
 import org.example.dormtaskmanagerapi.entity.repository.TaskRepository;
-import org.example.dormtaskmanagerapi.entity.repository.UserRepository;
 import org.example.dormtaskmanagerapi.security.SecurityService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -13,19 +12,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
-@SuppressWarnings("NullableProblems")
 @Service
 public class TaskService {
 
     private final TaskRepository taskRepository;
-    private final UserRepository userRepository;
     private final RoomRepository roomRepository;
     private final SecurityService securityService;
 
 
-    public TaskService(TaskRepository taskRepository, UserRepository userRepository, RoomRepository roomRepository, SecurityService securityService) {
+    public TaskService(TaskRepository taskRepository, RoomRepository roomRepository, SecurityService securityService) {
         this.taskRepository = taskRepository;
-        this.userRepository = userRepository;
         this.roomRepository = roomRepository;
         this.securityService = securityService;
     }
