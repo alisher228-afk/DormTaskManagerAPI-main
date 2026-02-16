@@ -3,7 +3,6 @@ package org.example.dormtaskmanagerapi.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.example.dormtaskmanagerapi.security.Role;
-import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "auth_users")
@@ -18,9 +17,9 @@ public class AuthUser {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
-    private boolean enabled=true;
+    private boolean enabled = true;
     @JsonIgnore
-    @OneToOne(mappedBy = "authUser" , cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "authUser", cascade = CascadeType.ALL)
     private User user;
 
     public AuthUser(Long id, String username, String password, Role role, boolean enabled, User user) {
@@ -31,6 +30,7 @@ public class AuthUser {
         this.enabled = enabled;
         this.user = user;
     }
+
     public AuthUser() {
 
     }

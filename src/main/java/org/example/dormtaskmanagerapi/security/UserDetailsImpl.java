@@ -1,7 +1,6 @@
 package org.example.dormtaskmanagerapi.security;
 
 import org.example.dormtaskmanagerapi.entity.AuthUser;
-import org.example.dormtaskmanagerapi.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -39,9 +38,20 @@ public class UserDetailsImpl implements UserDetails {
         return authUser.isEnabled();
     }
 
-    @Override public boolean isAccountNonExpired() { return true; }
-    @Override public boolean isAccountNonLocked() { return true; }
-    @Override public boolean isCredentialsNonExpired() { return true; }
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
 
     public AuthUser getAuthUser() {
         return authUser;

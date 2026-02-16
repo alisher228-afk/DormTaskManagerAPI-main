@@ -19,7 +19,7 @@ public class AuthUserController {
     }
 
     @PostMapping("/register")
-    public AuthRegisterResponses register(@RequestBody RegisterRequest request){
+    public AuthRegisterResponses register(@RequestBody RegisterRequest request) {
         return authUserService.register(request);
     }
 
@@ -27,10 +27,10 @@ public class AuthUserController {
     @GetMapping("/authUsers")
     public Page<AuthRegisterResponses> getAuthUsers(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "3") int size)
-    {
+            @RequestParam(defaultValue = "3") int size) {
         return authUserService.getAuthUsers(page, size);
     }
+
     @PostMapping("/login")
     public LoginResponse login(@RequestBody LoginRequest request) {
         return authUserService.login(request);

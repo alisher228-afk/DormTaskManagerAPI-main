@@ -30,13 +30,13 @@ public class TaskService {
         return taskRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Task with id " + id + " not found"));
     }
+
     public Page<Task> getAllTasks(int page, int size) {
         User currentUser = securityService.getCurrentUser();
 
         Pageable pageable = PageRequest.of(page, size);
         return taskRepository.findByUser(currentUser, pageable);
     }
-
 
 
     public Task createTask(Task task) {
@@ -65,7 +65,6 @@ public class TaskService {
     }
 
 
-
     public Task deleteTaskById(Long id) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Task with id " + id + " not found"));
@@ -73,19 +72,19 @@ public class TaskService {
         return task;
     }
 
-public Task approveTask(Long taskId) {
-    Task task = taskRepository.findById(taskId)
-            .orElseThrow(() -> new EntityNotFoundException("Task not found"));
+    public Task approveTask(Long taskId) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new EntityNotFoundException("Task not found"));
 
-    User currentUser = securityService.getCurrentUser();
+        User currentUser = securityService.getCurrentUser();
 
-    if (!task.getUser().getId().equals(currentUser.getId())) {
-        throw new AccessDeniedException("This is not your task");
+        if (!task.getUser().getId().equals(currentUser.getId())) {
+            throw new AccessDeniedException("This is not your task");
+        }
+
+        task.setStatus(Status.COMPLETED);
+        return taskRepository.save(task);
     }
-
-    task.setStatus(Status.COMPLETED);
-    return taskRepository.save(task);
-}
 
 
 }

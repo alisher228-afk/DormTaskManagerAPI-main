@@ -2,8 +2,8 @@ package org.example.dormtaskmanagerapi.presentation.controller;
 
 
 import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserListResponse;
-import org.example.dormtaskmanagerapi.entity.User;
 import org.example.dormtaskmanagerapi.application.service.UserService;
+import org.example.dormtaskmanagerapi.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +38,7 @@ public class UserController {
     public User deleteUserById(@PathVariable Long id) {
         return userService.deleteUserById(id);
     }
+
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{id}/assign-room/{roomId}")
     public User assignToRoom(@PathVariable("id") Long id, @PathVariable("roomId") Long roomId) {

@@ -6,5 +6,5 @@ public record ExMessage(
         String message,
         String detailedMessage,
         LocalDateTime errorTime
-)
-{}
+) {
+}

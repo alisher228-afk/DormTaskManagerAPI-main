@@ -1,9 +1,9 @@
 package org.example.dormtaskmanagerapi.presentation.controller;
 
-import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomListResponse;
 import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomDetailResponse;
-import org.example.dormtaskmanagerapi.entity.Room;
+import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomListResponse;
 import org.example.dormtaskmanagerapi.application.service.RoomService;
+import org.example.dormtaskmanagerapi.entity.Room;
 import org.springframework.data.domain.Page;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +28,7 @@ public class RoomController {
     @GetMapping
     public Page<RoomListResponse> getAllRooms(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "3") int size)
-    {
+            @RequestParam(defaultValue = "3") int size) {
         return roomService.getAllRooms(page, size);
     }
 

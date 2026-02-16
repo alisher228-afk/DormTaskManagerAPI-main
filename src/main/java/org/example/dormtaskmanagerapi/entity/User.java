@@ -21,7 +21,8 @@ public class User {
     @JoinColumn(name = "auth_user_id")
     private AuthUser authUser;
 
-    public User() {}
+    public User() {
+    }
 
     public User(String name, Room room) {
         this.name = name;

@@ -53,15 +53,18 @@ Backend (Spring Boot) для управления задачами в общеж
 - Доступ по ролям (согласно `@PreAuthorize` в контроллерах):
 
 ### Auth
+
 - `GET /auth/authUsers` — **только ADMIN**
 
 ### Rooms
+
 - `POST /room/create` — **ADMIN**
 - `GET /room` — **ADMIN или USER**
 - `GET /room/{id}` — **ADMIN**
 - `DELETE /room/delete/{id}` — **ADMIN**
 
 ### Tasks
+
 - `GET /tasks` — **ADMIN или USER**
 - `GET /tasks/{id}` — **ADMIN или USER**
 - `POST /tasks/create` — **ADMIN**
@@ -69,6 +72,7 @@ Backend (Spring Boot) для управления задачами в общеж
 - `PUT /tasks/complete/{id}` — **USER**
 
 ### Users
+
 - `POST /users/create` — требует аутентификацию (глобально), но без `@PreAuthorize` по роли
 - `GET /users` — требует аутентификацию (глобально), но без `@PreAuthorize` по роли
 - `GET /users/{id}` — **ADMIN или USER**

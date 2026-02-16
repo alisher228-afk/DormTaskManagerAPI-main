@@ -12,5 +12,6 @@ public record TaskResponse(
         String userName,
         Long roomId,
         String roomName
-) {}
+) {
+}
 

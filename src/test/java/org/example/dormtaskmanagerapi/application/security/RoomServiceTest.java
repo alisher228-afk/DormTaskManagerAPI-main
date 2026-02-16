@@ -26,23 +26,23 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class RoomServiceTest {
-        @Mock
-        private RoomRepository roomRepository;
+    @Mock
+    private RoomRepository roomRepository;
 
-        @Mock
-        private UserRepository userRepository;
+    @Mock
+    private UserRepository userRepository;
 
-        @Mock
-        private TaskRepository taskRepository;
+    @Mock
+    private TaskRepository taskRepository;
 
-        @Mock
-        private RoomMapper roomMapper;
+    @Mock
+    private RoomMapper roomMapper;
 
-        @Mock
-        private SecurityService securityService;
+    @Mock
+    private SecurityService securityService;
 
-        @InjectMocks
-        private RoomService roomService;
+    @InjectMocks
+    private RoomService roomService;
 
     @Test
     void getRoomById_admin_success() {
@@ -68,6 +68,7 @@ public class RoomServiceTest {
         assertEquals(roomId, response.id());
         assertEquals("Room A", response.name());
     }
+
     @Test
     void getRoomById_notYourRoom_throwException() {
         // GIVEN
@@ -88,6 +89,7 @@ public class RoomServiceTest {
                 () -> roomService.getRoomById(requestedRoomId)
         );
     }
+
     @Test
     void getRoomById_userWithoutRoom_throwException() {
         User user = new User();

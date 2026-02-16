@@ -1,8 +1,8 @@
 package org.example.dormtaskmanagerapi.application.service;
 
 import jakarta.persistence.EntityNotFoundException;
-import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomListResponse;
 import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomDetailResponse;
+import org.example.dormtaskmanagerapi.application.Dto.RoomResponses.RoomListResponse;
 import org.example.dormtaskmanagerapi.application.Dto.UserResponses.UserShortResponse;
 import org.example.dormtaskmanagerapi.application.mapper.RoomMapper;
 import org.example.dormtaskmanagerapi.entity.Room;
@@ -83,13 +83,13 @@ public class RoomService {
 
     public Room deleteRoomById(Long id) {
         log.info("Deleting room by id {}", id);
-        Room room = roomRepository.findById( id)
-                .orElseThrow(()->new EntityNotFoundException("Room with id " + id + " not found"));
-        if(userRepository.existsByRoomId(id)) {
-            throw  new IllegalStateException("cannot delete room with users");
+        Room room = roomRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Room with id " + id + " not found"));
+        if (userRepository.existsByRoomId(id)) {
+            throw new IllegalStateException("cannot delete room with users");
         }
-        if(taskRepository.existsByRoom_Id(id)) {
-            throw  new IllegalStateException("cannot delete room with tasks");
+        if (taskRepository.existsByRoom_Id(id)) {
+            throw new IllegalStateException("cannot delete room with tasks");
         }
         roomRepository.delete(room);
         return room;

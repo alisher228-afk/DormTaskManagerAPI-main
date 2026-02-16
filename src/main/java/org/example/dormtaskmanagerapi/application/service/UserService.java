@@ -35,7 +35,7 @@ public class UserService {
 
     public User createUsers(User user) {
         log.info("Creating users");
-        if(!roomRepository.existsById(user.getRoom().getId())) {
+        if (!roomRepository.existsById(user.getRoom().getId())) {
             throw new EntityNotFoundException("Room not found");
         }
         AuthUser authUser = new AuthUser();
@@ -58,17 +58,17 @@ public class UserService {
     }
 
 
-
     public User getUserById(Long id) {
         log.info("Getting user by id {}", id);
         return userRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User not found"));
     }
+
     public User deleteUserById(Long id) {
         log.info("Deleting user by id {}", id);
-        User user  = userRepository.findById( id)
+        User user = userRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User not found"));
-        if(taskRepository.existsByUser_Id(id)) {
+        if (taskRepository.existsByUser_Id(id)) {
             throw new IllegalStateException("cannot delete user with tasks");
         }
         userRepository.delete(user);

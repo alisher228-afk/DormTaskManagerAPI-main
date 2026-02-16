@@ -22,6 +22,7 @@ public class GlobalExceptionHandler {
                         LocalDateTime.now()
                 ));
     }
+
     @ExceptionHandler({
             MethodArgumentNotValidException.class
     })
@@ -33,12 +34,14 @@ public class GlobalExceptionHandler {
                         LocalDateTime.now()
                 ));
     }
+
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<?> handleIllegalState(IllegalStateException ex) {
         return ResponseEntity
                 .status(HttpStatus.CONFLICT)
                 .body(Map.of("error", ex.getMessage()));
     }
+
     @ExceptionHandler(EntityExistsException.class)
     public ResponseEntity<ExMessage> handleEntityExists(EntityExistsException ex) {
         return ResponseEntity

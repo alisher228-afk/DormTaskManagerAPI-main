@@ -24,7 +24,7 @@ public class AuthUserService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
 
-    public AuthUserService(AuthUserRepository authUserRepository, AuthUserMapper authUserMapper, PasswordEncoder passwordEncoder,JwtService jwtService) {
+    public AuthUserService(AuthUserRepository authUserRepository, AuthUserMapper authUserMapper, PasswordEncoder passwordEncoder, JwtService jwtService) {
         this.authUserRepository = authUserRepository;
         this.authUserMapper = authUserMapper;
         this.passwordEncoder = passwordEncoder;

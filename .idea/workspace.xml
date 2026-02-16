@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git littleMistakes">
+    <list default="true" id="919d9900-1eef-4e88-8723-6b7e3e4e0739" name="Changes" comment="git Readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dormtaskmanagerapi/entity/AuthUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +234,11 @@
       <workItem from="1768737300026" duration="30000" />
       <workItem from="1768910849131" duration="874000" />
       <workItem from="1768914695664" duration="1820000" />
+      <workItem from="1768916775300" duration="216000" />
+      <workItem from="1769065924816" duration="12000" />
+      <workItem from="1769066114991" duration="1775000" />
+      <workItem from="1769424507183" duration="4784000" />
+      <workItem from="1769430199780" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="git com">
       <option name="closed" value="true" />
@@ -298,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768915528009</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="git Readme">
+      <option name="closed" value="true" />
+      <created>1768916894566</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1768916894566</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +353,8 @@
     <MESSAGE value="git securityUpdate" />
     <MESSAGE value="git JwtAndSwagger" />
     <MESSAGE value="git littleMistakes" />
-    <option name="LAST_COMMIT_MESSAGE" value="git littleMistakes" />
+    <MESSAGE value="git Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="git Readme" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
